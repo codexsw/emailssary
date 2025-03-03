@@ -15,7 +15,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/codexsw/emailssary-sdk"
+    "url": "https://github.com/codexsw/emailssary"
   },
   "devDependencies": {
     "@types/jest": "^29.5.12",
