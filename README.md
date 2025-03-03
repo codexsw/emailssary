@@ -18,14 +18,6 @@ import { EmailssarySDK } from 'emailssary-sdk';
 const sdk = new EmailssarySDK('your-api-key');
 ```
 
-You can also customize the base URL if needed:
-
-```typescript
-const sdk = new EmailssarySDK('your-api-key', {
-  baseUrl: 'https://custom-api.emailssary.com'
-});
-```
-
 ### Sending Emails
 
 Send emails using predefined templates:
@@ -68,7 +60,7 @@ interface EmailResponse {
 #### Constructor
 
 ```typescript
-new EmailssarySDK(apiKey: string, config?: { baseUrl?: string })
+new EmailssarySDK(apiKey: string)
 ```
 
 #### Methods
