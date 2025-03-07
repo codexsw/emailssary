@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.EmailssarySDK = void 0;
 class EmailssarySDK {
     constructor(apiKey) {
-        this.baseUrl = 'https://api.emailssary.com/v1';
+        this.baseUrl = 'https://www.emailssary.com/api/v1';
         if (!apiKey) {
             throw new Error('API key is required');
         }
@@ -21,6 +21,7 @@ class EmailssarySDK {
     request(endpoint, options) {
         return __awaiter(this, void 0, void 0, function* () {
             const response = yield fetch(`${this.baseUrl}${endpoint}`, Object.assign(Object.assign({}, options), { headers: Object.assign({ 'Content-Type': 'application/json', Authorization: `Bearer ${this.apiKey}` }, options.headers) }));
+            console.log(response);
             if (!response.ok) {
                 const errorBody = yield response.json();
                 throw new Error(`Error ${response.status}: ${errorBody.message || response.statusText}`);

@@ -17,7 +17,7 @@ export interface SendEmailResponse {
 
 export class EmailssarySDK {
   private apiKey: string;
-  private baseUrl: string = 'https://api.emailssary.com/v1';
+  private baseUrl: string = 'https://www.emailssary.com/api/v1';
 
   constructor(apiKey: string) {
     if (!apiKey) {
@@ -35,6 +35,8 @@ export class EmailssarySDK {
         ...options.headers,
       },
     });
+
+    console.log(response);
 
     if (!response.ok) {
       const errorBody = await response.json();

@@ -46,10 +46,14 @@ The `sendEmail` method returns a promise that resolves to:
 
 ```typescript
 interface EmailResponse {
-  id: string;          // Unique identifier for the sent email
-  status: 'sent' | 'failed';  // Status of the email
-  message: string;     // Success/error message
-  timestamp: string;   // ISO timestamp of when the email was sent
+  success: boolean
+  message: string
+  data: {
+    id: string
+    recipient: string
+    sentAt: string // ISO timestamp
+    type: string 
+  }
 }
 ```
 
@@ -90,7 +94,7 @@ Example with error handling:
 try {
   const response = await sdk.sendEmail({
     recipient: 'user@example.com',
-    email_type: 'welcome_email',
+    email_type: 'welcome',
     data: { username: 'JohnDoe' }
   });
   console.log('Email sent successfully:', response);

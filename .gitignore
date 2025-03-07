@@ -41,3 +41,9 @@ logs/
 
 # Yarn Integrity file
 .yarn-integrity 
+
+# Demo files
+src/demo.ts
+src/demo.js
+dist/demo.js
+dist/demo.d.ts
